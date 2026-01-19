@@ -17,6 +17,7 @@ from fastapi.responses import RedirectResponse
 # Load environment variables (MONGO_URI) from the .env file for security
 load_dotenv()
 app = FastAPI()
+
 async def root():
     # This automatically sends anyone who visits the home page to the /docs page
     return RedirectResponse(url="/docs")
